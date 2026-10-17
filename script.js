@@ -5,5 +5,5 @@ menuButton?.addEventListener("click", function () {
   const isOpen = navigation.classList.toggle("open");
 
   this.setAttribute("aria-expanded", String(isOpen));
-  this.textContent = isOpen ? "✕" : "☰";
+  this.textContent = isOpen ? "Close" : "Menu";
 });
