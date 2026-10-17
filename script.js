@@ -1,1 +1,9 @@
-document.querySelector('.menu')?.addEventListener('click',function(){const nav=document.querySelector('.links');const open=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(open));this.textContent=open?'✕':'☰'})
+const menuButton = document.querySelector(".menu");
+
+menuButton?.addEventListener("click", function () {
+  const navigation = document.querySelector(".links");
+  const isOpen = navigation.classList.toggle("open");
+
+  this.setAttribute("aria-expanded", String(isOpen));
+  this.textContent = isOpen ? "✕" : "☰";
+});
