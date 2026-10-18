@@ -3,7 +3,7 @@
   --teal:#148474;
   --mint:#d7f3e9;
   --cream:#fbfbf5;
-  --gold:#e6ba63;
+
   --ink:#15313c
 }
 * {
@@ -170,18 +170,6 @@ p {
   font-size:72px;
   color:#f2ce7c;
   z-index:2
-}
-.award {
-  background:#f2cc7c;
-  color:#423a23;
-  padding:18px 0
-}
-.award .wrap {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-  font-weight:800
 }
 .section {
   padding:83px 0
@@ -405,9 +393,6 @@ footer .foot {
   }
   .section {
     padding:55px 0
-  }
-  .award .wrap {
-    display:block
   }
   h1 {
     letter-spacing:-1.7px
