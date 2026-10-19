@@ -83,7 +83,23 @@ header {
   background:white;
   color:var(--heading);
   border-bottom:2px solid var(--line);
+  position:relative;
   overflow:hidden
+}
+.field-canvas {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:1;
+  pointer-events:none
+}
+.hero-inner > div:first-child {
+  position:relative;
+  z-index:2
+}
+.hero-inner > div:first-child h1 {
+  text-shadow:0 0 6px #fff,0 0 12px #fff
 }
 .hero-inner {
   display:grid;
