@@ -13,6 +13,7 @@
   hero.prepend(canvas);
   const ctx = canvas.getContext("2d");
 
+  const NUCLEUS = { x: 77.8 / 154, y: 71.7 / 151 };
   const SKY = "#1cb0f6", SKY_DARK = "#1899d6", ORANGE = "#ff9600", LINE = "#d6e9f3";
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -33,7 +34,9 @@
     const h = hero.getBoundingClientRect();
     if (logo && logo.offsetWidth) {
       const r = logo.getBoundingClientRect();
-      proton = { x: r.left - h.left + r.width / 2, y: r.top - h.top + r.height / 2 };
+      // Center of the atom's nucleus in fallon-logo.svg, measured from the
+      // embedded 154x151 image (not the image's geometric center).
+      proton = { x: r.left - h.left + r.width * NUCLEUS.x, y: r.top - h.top + r.height * NUCLEUS.y };
       logoRadius = r.width / 2;
     } else {
       proton = { x: W * 0.8, y: H * 0.5 };
